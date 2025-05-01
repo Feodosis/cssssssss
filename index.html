@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Книш Саша резюме</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="main">
+    <div class="name content-center">
+        <div>
+            <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+            <h1>{{name}}</h1>
+            <h3>{{position}}</h3>
+        </div>
+    </div>
+</div>
+    <div class="contacts content-center">
+        <div>
+            <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+            <h2>Contacts</h2>
+            <ul>
+                {% for contact, link in contacts %}
+                    {% if link %}
+                        <li><a href={{link}}>{{contact}}</a></li>
+                    {% else %}
+                        <li>{{contact}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="summary">
+        <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+<h2>summary</h2>
+<p>{{summary}}</p>
+</div>
+    <div class="skills">
+        <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+<h2>skills</h2>
+<table border ="1">
+    {% for i in range (0, skills|length, 4) %}
+    <tr>
+    {% for j in range(4) %}
+    {% if i + j < skills|length %}
+        <td>{{ skills[i + j] }}</td>
+    {% else %}
+        <td></td>
+    {% endif %}
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table></div>
+    <div class="projects">
+        <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+<h2>Projects</h2>
+        {%for project, link in projects%}
+        <a href={{link}}>{{project}}</a>
+        {% endfor %}
+</div>
+    <div class="achievements">
+        <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+    <h2>achievements</h2>
+        {% for achievement in achievements%}
+            <p>{{achievement}}</p>
+        {%endfor%}
+    </div>
+    <div class="facts">
+        <img class="gif-top" src="https://img1.picmix.com/output/stamp/normal/2/2/9/1/1661922_5f5be.gif" alt="gif">
+    <h2>Web Developer Facts</h2>
+        {% for fact in facts%}
+            <p>{{fact}}</p>
+        {%endfor%}
+    </div>
+</div>
+</body>
+</html>

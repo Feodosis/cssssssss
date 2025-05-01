@@ -1,0 +1,116 @@
+body { background-image: linear-gradient(157.5deg, rgba(197, 45, 183,0.2) 0%, rgba(197, 45, 183,0.2) 16.667%,rgba(49, 20, 191,0.2) 16.667%, rgba(49, 20, 191,0.2) 33.334%,rgba(160, 39, 185,0.2) 33.334%, rgba(160, 39, 185,0.2) 50.001%,rgba(123, 32, 187,0.2) 50.001%, rgba(123, 32, 187,0.2) 66.668%,rgba(234, 51, 181,0.2) 66.668%, rgba(234, 51, 181,0.2) 83.335%,rgba(86, 26, 189,0.2) 83.335%, rgba(86, 26, 189,0.2) 100.002%),linear-gradient(0deg, rgba(197, 45, 183,0.2) 0%, rgba(197, 45, 183,0.2) 16.667%,rgba(49, 20, 191,0.2) 16.667%, rgba(49, 20, 191,0.2) 33.334%,rgba(160, 39, 185,0.2) 33.334%, rgba(160, 39, 185,0.2) 50.001%,rgba(123, 32, 187,0.2) 50.001%, rgba(123, 32, 187,0.2) 66.668%,rgba(234, 51, 181,0.2) 66.668%, rgba(234, 51, 181,0.2) 83.335%,rgba(86, 26, 189,0.2) 83.335%, rgba(86, 26, 189,0.2) 100.002%),linear-gradient(112.5deg, rgba(197, 45, 183,0.2) 0%, rgba(197, 45, 183,0.2) 16.667%,rgba(49, 20, 191,0.2) 16.667%, rgba(49, 20, 191,0.2) 33.334%,rgba(160, 39, 185,0.2) 33.334%, rgba(160, 39, 185,0.2) 50.001%,rgba(123, 32, 187,0.2) 50.001%, rgba(123, 32, 187,0.2) 66.668%,rgba(234, 51, 181,0.2) 66.668%, rgba(234, 51, 181,0.2) 83.335%,rgba(86, 26, 189,0.2) 83.335%, rgba(86, 26, 189,0.2) 100.002%),linear-gradient(90deg, rgb(29, 6, 130),rgb(251, 111, 62));
+  color: white;
+  font-size: 20px;
+}
+}
+.main{ width: 50%;
+    margin: auto;
+    background-color: #7B2550;
+    padding: 20px;
+    border: 10px solid #620031;
+}
+h1, h2, h3 {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contacts {
+    left: 20%;
+    transform: translateX(-50%) perspective(20em) rotateY(18deg);
+    top: 10%;
+}
+
+.facts{
+    left: 20%;
+    transform: translateX(-50%) perspective(20em) rotateY(18deg);
+    top: 80%;
+    z-index: -1;
+}
+
+.skills {
+    left: 35%;
+    transform: translateX(-50%) perspective(30em) rotateY(18deg);
+    top: 44%;
+}
+
+.name{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 23px; /* або інше значення, де тобі зручно */
+
+
+
+}
+
+.summary{
+    right: 10%;
+    transform: translateX(10%) perspective(20em) rotateY(-18deg);
+    top: 10%;
+}
+
+.achievements{
+    right: 10%;
+    transform: translateX(10%) perspective(20em) rotateY(-18deg);
+    top: 80%;
+    z-index: -1;
+}
+
+.projects{
+    right: 25%;
+    transform: translateX(10%) perspective(30em) rotateY(-18deg);
+    top: 44%;
+}
+
+.summary,.name, .skills, .position, .contacts, .projects, .achievements, .facts{
+    background-color: #7B2550;
+    position: absolute;
+    padding: 50px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    transition: top 1s, transform 1s;
+    width: 300px;
+}
+
+.name:hover,.summary:hover, .skills:hover, .projects:hover, .contacts:hover, .facts:hover, .achievements:hover{
+    top: 20%;
+    transform: translateX(-50%) scale(1.5);
+    z-index: 1;
+}
+
+.gif-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* або contain */
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.9; /* необов’язково: зробить рамку прозорішою */
+}
+
+.content-center{
+    display: flex;
+    justify-content: center;  /* горизонтально */
+    align-items: center;
+}
+
+.projects a{
+display: block;
+background-color: rgba(129,64,145,0.3);
+padding: 20px;
+margin: 10px;
+
+}
+
+a{
+text-decoration: none;
+color: white;
+}
+
+a:hover{
+color: #e2afdc;
+transition: .5s;
+}
